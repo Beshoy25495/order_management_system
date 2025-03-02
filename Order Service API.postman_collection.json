@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "4ad9c52b-5ff3-4528-9df9-3b722fd93ce4",
+		"name": "Order Service API",
+		"description": "Collection for testing Order Service API endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4490654"
+	},
+	"item": [
+		{
+			"name": "Create Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 1,\n  \"customerName\": \"John Doe\",\n  \"product\": \"Laptop\",\n  \"quantity\": 2,\n  \"status\": \"PENDING\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/orders",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Orders By Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/orders/status/PENDING",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"orders",
+						"status",
+						"PENDING"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Status By orederId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/orders/status/PENDING",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"orders",
+						"status",
+						"PENDING"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		}
+	]
+}
