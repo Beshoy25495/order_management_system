@@ -21,8 +21,8 @@ src/main/java/com/bwagih/orderservice/
 ├── infrastructure
 │   ├── aspects           # AOP Aspects (e.g., MeasurementAspect)
 │   ├── config            # Configuration classes (e.g., RabbitMQ, MongoDB)
-│   └── repositories      # Repository implementations
-│   └── presentation      # REST controllers and DTOs
+│   ├── repositories      # Repository implementations
+├── presentation          # REST controllers and DTOs
 └── shared
     ├── utils             # Shared utilities or helpers
     └── annotations       # Custom annotations (e.g., MeasureExecutionTime)
